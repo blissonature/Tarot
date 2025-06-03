@@ -1,13 +1,27 @@
-/* GENERAL LAYOUT */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 2vw;
+  background-color: #f4f4f9;
+}
+
+h1 {
+  font-size: 2.5vw;
+  margin-bottom: 1vw;
+}
+
+label, select, button {
+  font-size: 1.2vw;
+  margin: 0.5vw;
+  padding: 0.5vw;
+}
+
 #spread-output {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1vw;
   margin-top: 2vw;
 }
 
-/* CARD */
+/* CARD STYLING */
 .card {
   background: white;
   border: 1px solid #ccc;
@@ -43,6 +57,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1vw;
+  justify-content: center;
 }
 
 /* CELTIC CROSS GRID */
@@ -51,10 +66,11 @@
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(5, auto);
   gap: 1vw;
+  justify-content: center;
 }
 
-.celtic-cross .card:nth-child(1) { grid-column: 3; grid-row: 3; } /* Center */
-.celtic-cross .card:nth-child(2) { grid-column: 3; grid-row: 3; z-index: 1; } /* Cross */
+.celtic-cross .card:nth-child(1) { grid-column: 3; grid-row: 3; z-index: 1; }
+.celtic-cross .card:nth-child(2) { grid-column: 3; grid-row: 3; z-index: 2; }
 .celtic-cross .card:nth-child(3) { grid-column: 3; grid-row: 4; }
 .celtic-cross .card:nth-child(4) { grid-column: 2; grid-row: 3; }
 .celtic-cross .card:nth-child(5) { grid-column: 3; grid-row: 2; }
