@@ -146,3 +146,14 @@ body {
 .celtic-cross {
   margin: 0 auto;
 }
+
+/* Extra vertical space between Celtic Cross rows */
+.celtic-cross {
+  row-gap: 4vh;
+}
+
+/* Add vertical margin to all cards to assist centering and spacing */
+.card {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
