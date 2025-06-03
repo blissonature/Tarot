@@ -201,57 +201,46 @@ body {
 
 /* DO NOT override Celtic Cross grid layout */
 
-/* Fully restore the grid-based Celtic Cross layout */
 .celtic-cross {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(5, auto);
-  gap: 2vw 2vw;
+  gap: 2vw;
   justify-content: center;
-  align-content: center;
+  align-content: start;
   margin: 0 auto;
+  min-width: 80vw; /* Prevent card wrap */
+  max-width: 100vw;
 }
 
-/* Card 1 - Center */
+/* Positioning each card explicitly */
 .celtic-cross .card:nth-child(1) {
   grid-column: 3;
   grid-row: 3;
   z-index: 1;
 }
-
-/* Card 2 - Overlapping Challenge (rotated) */
 .celtic-cross .card:nth-child(2) {
   grid-column: 3;
   grid-row: 3;
   z-index: 2;
   transform: rotate(90deg);
 }
-
-/* Card 3 - Below */
 .celtic-cross .card:nth-child(3) {
   grid-column: 3;
   grid-row: 4;
 }
-
-/* Card 4 - Left */
 .celtic-cross .card:nth-child(4) {
   grid-column: 2;
   grid-row: 3;
 }
-
-/* Card 5 - Above */
 .celtic-cross .card:nth-child(5) {
   grid-column: 3;
   grid-row: 2;
 }
-
-/* Card 6 - Right */
 .celtic-cross .card:nth-child(6) {
   grid-column: 4;
   grid-row: 3;
 }
-
-/* Cards 7–10 - Vertical stack on the far right */
 .celtic-cross .card:nth-child(7) {
   grid-column: 6;
   grid-row: 5;
