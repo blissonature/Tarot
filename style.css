@@ -173,3 +173,9 @@ h1 {
 #spread-output.celtic-cross .card:nth-child(2):hover {
   transform: rotate(90deg) scale(1.05);
 }
+
+
+
+#spread-output.celtic-cross .card:nth-child(1):hover {
+  z-index: 4;
+}
