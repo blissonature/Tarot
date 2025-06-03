@@ -75,17 +75,17 @@ function drawSpread(deck, pattern) {
 }
 
 const spreads = {
-  "Saturn Square": [
-    "Restriction",
-    "Karmic Pattern",
-    "Suppressed Potential",
-    "Challenge",
-    "Saturn’s Gaze / Core Issue",
-    "Discipline",
-    "Foundation",
-    "Manifested Result",
-    "Path to Mastery"
-  ],
+  "Saturn Square": {
+    "Restriction": "Position 1",
+    "Karmic Pattern": "Position 2",
+    "Suppressed Potential": "Position 3",
+    "Challenge": "Position 4",
+    "Saturn’s Gaze / Core Issue": "Position 5",
+    "Discipline": "Position 6",
+    "Foundation": "Position 7",
+    "Manifested Result": "Position 8",
+    "Path to Mastery": "Position 9"
+  },
   "Past / Present / Future": {
     "Past": "Position 1",
     "Present": "Position 2",
