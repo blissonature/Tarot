@@ -157,3 +157,20 @@ body {
   margin-top: 1vh;
   margin-bottom: 1vh;
 }
+
+/* Fix card height and allow scroll for metadata */
+.card {
+  height: 22vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card-details {
+  overflow-y: auto;
+  max-height: 10vw;
+  margin-top: 1vh;
+  padding: 0.5vh;
+}
