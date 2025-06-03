@@ -147,7 +147,13 @@ document.getElementById("draw-button").addEventListener("click", () => {
   
   const output = document.getElementById("spread-output");
   output.innerHTML = "";
-  output.className = spreadType === "Saturn Square" ? "saturn-square" : "";
+  if (spreadType === "Saturn Square") {
+    output.className = "saturn-square";
+  } else if (spreadType === "Celtic Cross") {
+    output.className = "celtic-cross";
+  } else {
+    output.className = "";
+  }
 
 
   results.forEach(({ label, card }) => {
