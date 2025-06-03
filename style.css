@@ -175,23 +175,50 @@ body {
   padding: 0.5vh;
 }
 
-/* Ensure all spreads are centered horizontally */
+/* Re-center spread-output without overriding grid-based spreads */
 #spread-output {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-/* Override for grid-based spreads */
-.saturn-square,
-.celtic-cross,
-.past-/-present-/-future {
+/* Keep Saturn Square as grid */
+.saturn-square {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 1.5vw;
   margin: 0 auto;
 }
 
-/* Ensure 3-card spread appears in a row */
+/* Keep 3-card spread horizontal */
 .past-/-present-/-future {
   display: flex;
   flex-direction: row;
   gap: 2vw;
+  justify-content: center;
 }
+
+/* DO NOT override Celtic Cross grid layout */
+
+/* Restore original grid layout for Celtic Cross */
+.celtic-cross {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, auto);
+  gap: 1vw;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
+}
+
+.celtic-cross .card:nth-child(1) { grid-column: 3; grid-row: 3; z-index: 1; }
+.celtic-cross .card:nth-child(2) { grid-column: 3; grid-row: 3; z-index: 2; transform: rotate(90deg); }
+.celtic-cross .card:nth-child(3) { grid-column: 3; grid-row: 4; }
+.celtic-cross .card:nth-child(4) { grid-column: 2; grid-row: 3; }
+.celtic-cross .card:nth-child(5) { grid-column: 3; grid-row: 2; }
+.celtic-cross .card:nth-child(6) { grid-column: 4; grid-row: 3; }
+.celtic-cross .card:nth-child(7) { grid-column: 6; grid-row: 5; }
+.celtic-cross .card:nth-child(8) { grid-column: 6; grid-row: 4; }
+.celtic-cross .card:nth-child(9) { grid-column: 6; grid-row: 3; }
+.celtic-cross .card:nth-child(10) { grid-column: 6; grid-row: 2; }
