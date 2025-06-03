@@ -5,8 +5,7 @@ function digitalRoot(n) {
 
 // Full generateGoldenDawnMinorMeanings function with all cards (Aces through Kings)
 function generateGoldenDawnMinorMeanings() {
-  return {
-    "Ace of Wands": { element: "Fire", zodiac: "", meaning: "Beginning of inspiration", index: 22 },
+  return {"Ace of Wands": { element: "Fire", zodiac: "", meaning: "Beginning of inspiration", index: 22 },
     "Ace of Cups": { element: "Water", zodiac: "", meaning: "Beginning of love", index: 36 },
     "Ace of Swords": { element: "Air", zodiac: "", meaning: "Beginning of reason", index: 50 },
     "Ace of Disks": { element: "Earth", zodiac: "", meaning: "Beginning of manifestation", index: 64 },
@@ -61,8 +60,7 @@ function generateGoldenDawnMinorMeanings() {
     "Princess of Disks": { element: "Earth of Earth", zodiac: "Taurus–Virgo–Capricorn", meaning: "Practicality, fertility, groundedness", index: 77 },
     "Prince of Disks": { element: "Air of Earth", zodiac: "Taurus", meaning: "Diligence, patience, dependability", index: 78 },
     "Queen of Disks": { element: "Water of Earth", zodiac: "Sagittarius–Capricorn", meaning: "Nurturing, security, abundance", index: 79 },
-    "King of Disks": { element: "Fire of Earth", zodiac: "Leo–Virgo", meaning: "Stability, success, responsibility", index: 80 }
-  };
+    "King of Disks": { element: "Fire of Earth", zodiac: "Leo–Virgo", meaning: "Stability, success, responsibility", index: 80 }};
 }
 
 function generateGoldenDawnDeck() {

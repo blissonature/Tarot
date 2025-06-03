@@ -107,3 +107,42 @@ body {
 .card-details {
   font-size: 1.1vw;
 }
+
+/* Maintain hover for rotated Card 2 */
+.celtic-cross .card:nth-child(2):hover {
+  transform: rotate(90deg) scale(1.03);
+  z-index: 3;
+}
+
+/* Card 1 z-axis hover elevation */
+.celtic-cross .card:nth-child(1):hover {
+  z-index: 4;
+  transform: scale(1.03);
+}
+
+/* Fully center all spreads */
+.saturn-square,
+.celtic-cross,
+.past-/-present-/-future {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+/* Past/Present/Future: 3 horizontal cards */
+.past-/-present-/-future {
+  grid-template-columns: repeat(3, auto);
+  gap: 2vw;
+}
+
+/* Ensure Saturn Square remains 3x3 and centered */
+.saturn-square {
+  grid-template-columns: repeat(3, auto);
+  gap: 1.5vw;
+  margin: 0 auto;
+}
+
+/* Center Celtic Cross by spanning full width grid */
+.celtic-cross {
+  margin: 0 auto;
+}
