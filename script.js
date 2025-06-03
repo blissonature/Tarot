@@ -135,61 +135,6 @@ function generateGoldenDawnDeck() {
   return { ...major, ...minor };
 }
 
-
-
-
-});
-
-
-document.getElementById("draw-button").addEventListener("click", () => {
-  const spreadType = document.getElementById("spread-select").value;
-  const pattern = spreads[spreadType];
-  const deck = generateGoldenDawnDeck();
-  const results = drawSpread(deck, pattern);
-
-  const output = document.getElementById("spread-output");
-  output.innerHTML = "";
-  if (spreadType === "Saturn Square") {
-    output.className = "saturn-square";
-  } else if (spreadType === "Celtic Cross") {
-    output.className = "celtic-cross";
-  } else {
-    output.className = "";
-  }
-
-  results.forEach(({ label, card }) => {
-    const div = document.createElement("div");
-    div.className = "card";
-
-    const digital = digitalRoot(card.index);
-    const isMajor = 'path' in card;
-
-    div.innerHTML = `
-      <strong>${label}</strong><br>
-      <em>${card.name}</em><br>
-      <div class="card-details" style="display:none;">
-        ${card.meaning}<br>
-        ${card.zodiac ? `<small>Zodiac: ${card.zodiac}</small><br>` : ''}
-        <small>Index: ${card.index}</small><br>
-        <small>Digital Root: ${digital}</small><br>
-        ${isMajor ? `
-          <small>Path: ${card.path} (#${card.pathNumber})</small><br>
-          <small>Hebrew Letter: ${card.letter} (${card.hebrewSymbol})</small>
-        ` : ''}
-      </div>
-    `;
-
-    div.addEventListener("click", () => {
-      const details = div.querySelector(".card-details");
-      details.style.display = details.style.display === "block" ? "none" : "block";
-    });
-
-    output.appendChild(div);
-  });
-});
-
-
-
 document.getElementById("draw-button").addEventListener("click", () => {
   const spreadType = document.getElementById("spread-select").value;
   const pattern = spreads[spreadType];
