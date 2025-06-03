@@ -76,27 +76,17 @@ function drawSpread(deck, pattern) {
 
 const spreads = {
   "Saturn Square": {
-  "Restriction": null,
-  "Karmic Pattern": null,
-  "Suppressed Potential": null,
-  "Challenge": null,
-  "Saturn’s Gaze": null,
-  "Discipline": null,
-  "Foundation": null,
-  "Manifested Result": null,
-  "Path to Mastery": null
+  "Restriction": "Card 1",
+  "Karmic Pattern": "Card 2",
+  "Suppressed Potential": "Card 3",
+  "Challenge": "Card 4",
+  "Saturn’s Gaze": "Card 5",
+  "Discipline": "Card 6",
+  "Foundation": "Card 7",
+  "Manifested Result": "Card 8",
+  "Path to Mastery": "Card 9"
 },
-  "Saturn Square": [
-    "Restriction",
-    "Karmic Pattern",
-    "Suppressed Potential",
-    "Challenge",
-    "Saturn’s Gaze / Core Issue",
-    "Discipline",
-    "Foundation",
-    "Manifested Result",
-    "Path to Mastery"
-  ],
+  
   "Past / Present / Future": {
     "Past": "Position 1",
     "Present": "Position 2",
@@ -145,74 +135,3 @@ function generateGoldenDawnDeck() {
   };
   return { ...major, ...minor };
 }
-
-
-
-function drawSpread(deck, pattern) {
-  const labels = Object.keys(pattern);
-  const used = new Set();
-  const results = [];
-
-  while (results.length < labels.length) {
-    const index = Math.floor(Math.random() * 78);
-    if (!used.has(index)) {
-      used.add(index);
-      const cardName = Object.keys(deck)[index];
-      results.push({ label: labels[results.length], card: deck[cardName] });
-      results[results.length - 1].card.name = cardName;
-    }
-  }
-
-  return results;
-}
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("draw-button").addEventListener("click", () => {
-    const spreadType = document.getElementById("spread-select").value;
-    const pattern = spreads[spreadType];
-    const deck = generateGoldenDawnDeck();
-    const results = drawSpread(deck, pattern);
-
-    const output = document.getElementById("spread-output");
-    output.innerHTML = "";
-    if (spreadType === "Saturn Square") {
-      output.className = "saturn-square";
-    } else if (spreadType === "Celtic Cross") {
-      output.className = "celtic-cross";
-    } else {
-      output.className = "";
-    }
-
-    results.forEach(({ label, card }) => {
-      const div = document.createElement("div");
-      div.className = "card";
-
-      const digital = digitalRoot(card.index);
-      const isMajor = 'path' in card;
-
-      div.innerHTML = `
-        <strong>${label}</strong><br>
-        <em>${card.name}</em><br>
-        <div class="card-details" style="display:none;">
-          ${card.meaning}<br>
-          ${card.zodiac ? `<small>Zodiac: ${card.zodiac}</small><br>` : ''}
-          <small>Index: ${card.index}</small><br>
-          <small>Digital Root: ${digital}</small><br>
-          ${isMajor ? `
-            <small>Path: ${card.path} (#${card.pathNumber})</small><br>
-            <small>Hebrew Letter: ${card.letter} (${card.hebrewSymbol})</small>
-          ` : ''}
-        </div>
-      `;
-
-      div.addEventListener("click", () => {
-        const details = div.querySelector(".card-details");
-        details.style.display = details.style.display === "block" ? "none" : "block";
-      });
-
-      output.appendChild(div);
-    });
-  });
-});
