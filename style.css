@@ -4,8 +4,8 @@
   border: 0.1vw solid #ccc;
   border-radius: 1vw;
   padding: 1vw;
-  width: 22vw;
-  height: 36vh;
+  width: 20vw;
+  height: 38vh;
   box-shadow: 0 0.3vw 0.6vw rgba(0, 0, 0, 0.1);
   text-align: left;
   transition: transform 0.2s ease-in-out;
@@ -13,8 +13,8 @@
   flex-direction: column;
   justify-content: flex-start;
   font-family: sans-serif;
-  font-size: 1.1vw;
-  line-height: 1.4;
+  font-size: 1.3vw;
+  line-height: 1.5;
   overflow: hidden;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .card small {
-  font-size: 1vw;
+  font-size: 1.1vw;
   display: block;
   margin-top: 0.2vh;
 }
@@ -40,6 +40,8 @@
   flex-wrap: wrap;
   gap: 1.5vw;
   justify-content: center;
+  align-items: start;
+  align-content: start;
 }
 
 body {
@@ -54,12 +56,12 @@ h1, select, button {
 }
 
 h1 {
-  font-size: 2.6vw;
+  font-size: 2.8vw;
   margin-bottom: 2vh;
 }
 
 select, button {
-  font-size: 1.2vw;
+  font-size: 1.4vw;
   padding: 0.5vh 1vw;
   margin: 0.5vh;
 }
