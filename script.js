@@ -153,3 +153,67 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+
+function generateGoldenDawnDeck() {
+  const major = {
+    "0 The Fool": {
+      meaning: "Beginnings, innocence, spontaneity",
+      index: 0,
+      path: "Kether–Chokmah",
+      pathNumber: 11,
+      letter: "Aleph",
+      hebrewSymbol: "א"
+    },
+    "1 The Magician": {
+      meaning: "Willpower, manifestation, resourcefulness",
+      index: 1,
+      path: "Kether–Binah",
+      pathNumber: 12,
+      letter: "Beth",
+      hebrewSymbol: "ב"
+    },
+    "2 The High Priestess": {
+      meaning: "Mystery, intuition, inner voice",
+      index: 2,
+      path: "Kether–Tiphereth",
+      pathNumber: 13,
+      letter: "Gimel",
+      hebrewSymbol: "ג"
+    },
+    "21 The World": {
+      meaning: "Completion, integration, accomplishment",
+      index: 21,
+      path: "Yesod–Malkuth",
+      pathNumber: 32,
+      letter: "Tav",
+      hebrewSymbol: "ת"
+    }
+    // Add remaining Major Arcana here
+  };
+
+  const minor = {
+    "Ace of Wands": {
+      meaning: "Beginning of inspiration",
+      index: 22
+    },
+    "2 of Wands": {
+      meaning: "Planning, decisions, potential",
+      index: 23
+    },
+    "3 of Cups": {
+      meaning: "Abundance, joy, celebration",
+      zodiac: "Mercury in Cancer",
+      index: 38
+    },
+    "King of Swords": {
+      meaning: "Discipline, authority, intellectual mastery",
+      zodiac: "Capricorn–Aquarius",
+      index: 76
+    }
+    // Add remaining Minor Arcana here
+  };
+
+  return { ...major, ...minor };
+}
