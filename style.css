@@ -79,3 +79,31 @@ label, select, button {
 .celtic-cross .card:nth-child(8) { grid-column: 6; grid-row: 4; }
 .celtic-cross .card:nth-child(9) { grid-column: 6; grid-row: 3; }
 .celtic-cross .card:nth-child(10) { grid-column: 6; grid-row: 2; }
+
+/* Updated for readability and layout */
+body {
+  font-size: 1.2vw;
+}
+
+#spread-output {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Rotate card 2 in Celtic Cross */
+.celtic-cross .card:nth-child(2) {
+  transform: rotate(90deg);
+}
+
+/* Increase font sizes within cards */
+.card {
+  font-size: 1.2vw;
+}
+
+.card em {
+  font-size: 1.4vw;
+}
+
+.card-details {
+  font-size: 1.1vw;
+}
