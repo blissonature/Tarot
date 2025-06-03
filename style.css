@@ -111,16 +111,16 @@ h1 {
 }
 
 /* Define the placement of each card by area */
-.card:nth-child(1) { grid-column: 4; grid-row: 3; } /* Current Situation */
-.card:nth-child(2) { grid-column: 4; grid-row: 3; z-index: 1; transform: rotate(90deg); } /* Challenge */
-.card:nth-child(3) { grid-column: 4; grid-row: 4; } /* Need to focus on */
-.card:nth-child(4) { grid-column: 3; grid-row: 3; } /* Past/Leaving */
-.card:nth-child(5) { grid-column: 4; grid-row: 2; } /* Strengths */
-.card:nth-child(6) { grid-column: 5; grid-row: 3; } /* Near future */
-.card:nth-child(7) { grid-column: 7; grid-row: 5; } /* Advice */
-.card:nth-child(8) { grid-column: 7; grid-row: 4; } /* Environment */
-.card:nth-child(9) { grid-column: 7; grid-row: 3; } /* Hopes & Fears */
-.card:nth-child(10) { grid-column: 7; grid-row: 2; } /* Potential Outcome */
+ /* Current Situation */
+ /* Challenge */
+ /* Need to focus on */
+ /* Past/Leaving */
+ /* Strengths */
+ /* Near future */
+ /* Advice */
+ /* Environment */
+ /* Hopes & Fears */
+ /* Potential Outcome */
 
 
 
@@ -135,13 +135,26 @@ h1 {
 }
 
 /* Positions based on traditional Celtic Cross diagram */
-.card:nth-child(1) { grid-column: 4; grid-row: 3; z-index: 2; } /* 1 - Current Situation */
-.card:nth-child(2) { grid-column: 4; grid-row: 3; z-index: 3; transform: rotate(90deg); } /* 2 - Challenge */
-.card:nth-child(3) { grid-column: 4; grid-row: 4; } /* 3 - Focus / Below */
-.card:nth-child(4) { grid-column: 3; grid-row: 3; } /* 4 - Past / Left */
-.card:nth-child(5) { grid-column: 4; grid-row: 2; } /* 5 - Strengths / Above */
-.card:nth-child(6) { grid-column: 5; grid-row: 3; } /* 6 - Near Future / Right */
-.card:nth-child(7) { grid-column: 6; grid-row: 6; } /* 7 - Advice / Bottom of staff */
-.card:nth-child(8) { grid-column: 6; grid-row: 5; } /* 8 - Environment */
-.card:nth-child(9) { grid-column: 6; grid-row: 4; } /* 9 - Hopes & Fears */
-.card:nth-child(10) { grid-column: 6; grid-row: 3; } /* 10 - Potential Outcome */
+ /* 1 - Current Situation */
+ /* 2 - Challenge */
+ /* 3 - Focus / Below */
+ /* 4 - Past / Left */
+ /* 5 - Strengths / Above */
+ /* 6 - Near Future / Right */
+ /* 7 - Advice / Bottom of staff */
+ /* 8 - Environment */
+ /* 9 - Hopes & Fears */
+ /* 10 - Potential Outcome */
+
+
+
+#spread-output.celtic-cross .card:nth-child(1) { grid-column: 4; grid-row: 3; z-index: 2; }
+#spread-output.celtic-cross .card:nth-child(2) { grid-column: 4; grid-row: 3; z-index: 3; transform: rotate(90deg); }
+#spread-output.celtic-cross .card:nth-child(3) { grid-column: 4; grid-row: 4; }
+#spread-output.celtic-cross .card:nth-child(4) { grid-column: 3; grid-row: 3; }
+#spread-output.celtic-cross .card:nth-child(5) { grid-column: 4; grid-row: 2; }
+#spread-output.celtic-cross .card:nth-child(6) { grid-column: 5; grid-row: 3; }
+#spread-output.celtic-cross .card:nth-child(7) { grid-column: 6; grid-row: 6; }
+#spread-output.celtic-cross .card:nth-child(8) { grid-column: 6; grid-row: 5; }
+#spread-output.celtic-cross .card:nth-child(9) { grid-column: 6; grid-row: 4; }
+#spread-output.celtic-cross .card:nth-child(10) { grid-column: 6; grid-row: 3; }
