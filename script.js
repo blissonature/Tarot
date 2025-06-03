@@ -6,10 +6,10 @@ function digitalRoot(n) {
 
 function generateGoldenDawnMinorMeanings() {
   return {
-    "Ace of Wands": { element: "Fire", zodiac: "", meaning: "Beginning of inspiration", index: 22 },
-    "Ace of Cups": { element: "Water", zodiac: "", meaning: "Beginning of love", index: 36 },
-    "Ace of Swords": { element: "Air", zodiac: "", meaning: "Beginning of reason", index: 50 },
-    "Ace of Disks": { element: "Earth", zodiac: "", meaning: "Beginning of manifestation", index: 64 },
+    "Ace of Wands": { element: "Fire", meaning: "Beginning of inspiration", index: 22 },
+    "Ace of Cups": { element: "Water", meaning: "Beginning of love", index: 36 },
+    "Ace of Swords": { element: "Air", meaning: "Beginning of reason", index: 50 },
+    "Ace of Disks": { element: "Earth", meaning: "Beginning of manifestation", index: 64 },
 
     // Wands 2–10
     "2 of Wands": { element: "Fire", zodiac: "Mars in Aries", meaning: "Dominion, power", index: 23 },
@@ -106,10 +106,42 @@ const spreads = {
 };
 
 
+
+function generateGoldenDawnDeck() {
+  const minor = generateGoldenDawnMinorMeanings();
+  const major = {
+    "0 The Fool": { path: "Kether–Chokmah", "pathNumber": 11, "hebrewSymbol": "א", letter: "Aleph", meaning: "Beginnings, innocence, spontaneity", index: 0 },
+    "1 The Magician": { path: "Kether–Binah", "pathNumber": 12, "hebrewSymbol": "ב", letter: "Beth", meaning: "Skill, communication, initiative", index: 1 },
+    "2 The High Priestess": { path: "Kether–Tiphereth", "pathNumber": 13, "hebrewSymbol": "ג", letter: "Gimel", meaning: "Mystery, intuition, inner voice", index: 2 },
+    "3 The Empress": { path: "Chokmah–Binah", "pathNumber": 14, "hebrewSymbol": "ד", letter: "Daleth", meaning: "Fertility, beauty, nature", index: 3 },
+    "4 The Emperor": { path: "Chokmah–Tiphereth", "pathNumber": 15, "hebrewSymbol": "ה", letter: "Heh", meaning: "Authority, structure, control", index: 4 },
+    "5 The Hierophant": { path: "Chesed–Chokmah", "pathNumber": 16, "hebrewSymbol": "ו", letter: "Vav", meaning: "Tradition, spiritual guidance", index: 5 },
+    "6 The Lovers": { path: "Binah–Tiphereth", "pathNumber": 17, "hebrewSymbol": "ז", letter: "Zayin", meaning: "Union, choices, relationships", index: 6 },
+    "7 The Chariot": { path: "Binah–Geburah", "pathNumber": 18, "hebrewSymbol": "ח", letter: "Cheth", meaning: "Victory, determination, drive", index: 7 },
+    "8 Strength": { path: "Chesed–Geburah", "pathNumber": 19, "hebrewSymbol": "ט", letter: "Teth", meaning: "Courage, influence, patience", index: 8 },
+    "9 The Hermit": { path: "Chesed–Tiphareth", "pathNumber": 20, "hebrewSymbol": "י", letter: "Yod", meaning: "Solitude, wisdom, guidance", index: 9 },
+    "10 Wheel of Fortune": { path: "Chesed–Netzach", "pathNumber": 21, "hebrewSymbol": "כ", letter: "Kaph", meaning: "Change, cycles, fate", index: 10 },
+    "11 Justice": { path: "Geburah–Tiphareth", "pathNumber": 22, "hebrewSymbol": "ל", letter: "Lamed", meaning: "Fairness, truth, balance", index: 11 },
+    "12 The Hanged Man": { path: "Geburah–Hod", "pathNumber": 23, "hebrewSymbol": "מ", letter: "Mem", meaning: "Sacrifice, suspension, insight", index: 12 },
+    "13 Death": { path: "Tiphareth–Netzach", "pathNumber": 24, "hebrewSymbol": "נ", letter: "Nun", meaning: "Endings, transformation, transition", index: 13 },
+    "14 Temperance": { path: "Tiphareth–Yesod", "pathNumber": 25, "hebrewSymbol": "ס", letter: "Samekh", meaning: "Balance, healing, purpose", index: 14 },
+    "15 The Devil": { path: "Tiphareth–Hod", "pathNumber": 26, "hebrewSymbol": "ע", letter: "Ayin", meaning: "Bondage, materialism, temptation", index: 15 },
+    "16 The Tower": { path: "Netzach–Hod", "pathNumber": 27, "hebrewSymbol": "פ", letter: "Peh", meaning: "Upheaval, revelation, awakening", index: 16 },
+    "17 The Star": { path: "Netzach–Yesod", "pathNumber": 28, "hebrewSymbol": "צ", letter: "Tzaddi", meaning: "Hope, inspiration, serenity", index: 17 },
+    "18 The Moon": { path: "Netzach–Malkuth", "pathNumber": 29, "hebrewSymbol": "ק", letter: "Qoph", meaning: "Illusion, fear, subconscious", index: 18 },
+    "19 The Sun": { path: "Hod–Yesod", "pathNumber": 30, "hebrewSymbol": "ר", letter: "Resh", meaning: "Joy, success, vitality", index: 19 },
+    "20 Judgement": { path: "Hod–Malkuth", "pathNumber": 31, "hebrewSymbol": "ש", letter: "Shin", meaning: "Redemption, awakening, absolution", index: 20 },
+    "21 The World": { path: "Yesod–Malkuth", "pathNumber": 32, "hebrewSymbol": "ת", letter: "Tav", meaning: "Completion, integration, accomplishment", index: 21 }
+  };
+  return { ...major, ...minor };
+}
+
+
+
 document.getElementById("draw-button").addEventListener("click", () => {
   const spreadType = document.getElementById("spread-select").value;
   const pattern = spreads[spreadType];
-  const deck = generateGoldenDawnMinorMeanings();
+  const deck = generateGoldenDawnDeck();
   const results = drawSpread(deck, pattern);
 
   const output = document.getElementById("spread-output");
@@ -118,7 +150,22 @@ document.getElementById("draw-button").addEventListener("click", () => {
   results.forEach(({ label, card }) => {
     const div = document.createElement("div");
     div.className = "card";
-    div.innerHTML = `<strong>${label}</strong><br><em>${card.name}</em><br>${card.meaning}<br><small>${card.zodiac}</small>`;
+
+    const digital = digitalRoot(card.index);
+    const isMajor = 'path' in card;
+
+    div.innerHTML = `
+      <strong>${label}</strong><br>
+      <em>${card.name}</em><br>
+      ${card.meaning}<br>
+      ${card.zodiac ? `<small>Zodiac: ${card.zodiac}</small><br>` : ''}
+      <small>Index: ${card.index}</small><br>
+      <small>Digital Root: ${digital}</small><br>
+      ${isMajor ? `
+        <small>Path: ${card.path} (#${card.pathNumber})</small><br>
+        <small>Hebrew Letter: ${card.letter} (${card.hebrewSymbol})</small>
+      ` : ''}
+    `;
     output.appendChild(div);
   });
 });
