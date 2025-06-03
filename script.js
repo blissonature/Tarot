@@ -131,10 +131,16 @@ function drawSpread() {
 function createCardElement(card) {
   const container = document.createElement('div');
   container.className = 'card';
-  container.onclick = () => zoomIntoCard(card);
+  container.onclick = () => {
+    inner.classList.toggle('flipped');
+    setTimeout(() => zoomIntoCard(card), 600);
+  };
 
   const inner = document.createElement('div');
   inner.className = 'card-inner';
+  inner.style.transition = 'transform 0.6s';
+  inner.style.transformStyle = 'preserve-3d';
+  inner.style.position = 'relative';
 
   const back = document.createElement('div');
   back.className = 'card-back';
@@ -168,8 +174,9 @@ function exitZoom() {
   zoomCard.innerHTML = '';
 }
 
-drawBtn.onclick = drawSpread;
-console.log("Draw button ready");
+drawBtn.addEventListener('click', () => {
+  requestAnimationFrame(drawSpread);
+});
 searchBtn.onclick = () => {
   searchContainer.classList.toggle('hidden');
   cardList.innerHTML = '';
