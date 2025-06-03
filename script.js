@@ -104,3 +104,34 @@ const spreads = {
     "10. Outcome": "Position 10"
   }
 };
+
+
+
+function generateGoldenDawnDeck() {
+  const minor = generateGoldenDawnMinorMeanings();
+  const major = {
+    "0 The Fool": { path: "Kether–Chokmah", letter: "Aleph", hebrewSymbol: "א", pathNumber: 11, meaning: "Beginnings, innocence, spontaneity", index: 0 },
+    "1 The Magician": { path: "Kether–Binah", letter: "Beth", hebrewSymbol: "ב", pathNumber: 12, meaning: "Skill, communication, initiative", index: 1 },
+    "2 The High Priestess": { path: "Kether–Tiphereth", letter: "Gimel", hebrewSymbol: "ג", pathNumber: 13, meaning: "Mystery, intuition, inner voice", index: 2 },
+    "3 The Empress": { path: "Chokmah–Binah", letter: "Daleth", hebrewSymbol: "ד", pathNumber: 14, meaning: "Fertility, beauty, nature", index: 3 },
+    "4 The Emperor": { path: "Chokmah–Tiphereth", letter: "Heh", hebrewSymbol: "ה", pathNumber: 15, meaning: "Authority, structure, control", index: 4 },
+    "5 The Hierophant": { path: "Chesed–Chokmah", letter: "Vav", hebrewSymbol: "ו", pathNumber: 16, meaning: "Tradition, spiritual guidance", index: 5 },
+    "6 The Lovers": { path: "Binah–Tiphereth", letter: "Zayin", hebrewSymbol: "ז", pathNumber: 17, meaning: "Union, choices, relationships", index: 6 },
+    "7 The Chariot": { path: "Binah–Geburah", letter: "Cheth", hebrewSymbol: "ח", pathNumber: 18, meaning: "Victory, determination, drive", index: 7 },
+    "8 Strength": { path: "Chesed–Geburah", letter: "Teth", hebrewSymbol: "ט", pathNumber: 19, meaning: "Courage, influence, patience", index: 8 },
+    "9 The Hermit": { path: "Chesed–Tiphareth", letter: "Yod", hebrewSymbol: "י", pathNumber: 20, meaning: "Solitude, wisdom, guidance", index: 9 },
+    "10 Wheel of Fortune": { path: "Chesed–Netzach", letter: "Kaph", hebrewSymbol: "כ", pathNumber: 21, meaning: "Change, cycles, fate", index: 10 },
+    "11 Justice": { path: "Geburah–Tiphareth", letter: "Lamed", hebrewSymbol: "ל", pathNumber: 22, meaning: "Fairness, truth, balance", index: 11 },
+    "12 The Hanged Man": { path: "Geburah–Hod", letter: "Mem", hebrewSymbol: "מ", pathNumber: 23, meaning: "Sacrifice, suspension, insight", index: 12 },
+    "13 Death": { path: "Tiphareth–Netzach", letter: "Nun", hebrewSymbol: "נ", pathNumber: 24, meaning: "Endings, transformation, transition", index: 13 },
+    "14 Temperance": { path: "Tiphareth–Yesod", letter: "Samekh", hebrewSymbol: "ס", pathNumber: 25, meaning: "Balance, healing, purpose", index: 14 },
+    "15 The Devil": { path: "Tiphareth–Hod", letter: "Ayin", hebrewSymbol: "ע", pathNumber: 26, meaning: "Bondage, materialism, temptation", index: 15 },
+    "16 The Tower": { path: "Netzach–Hod", letter: "Peh", hebrewSymbol: "פ", pathNumber: 27, meaning: "Upheaval, revelation, awakening", index: 16 },
+    "17 The Star": { path: "Netzach–Yesod", letter: "Tzaddi", hebrewSymbol: "צ", pathNumber: 28, meaning: "Hope, inspiration, serenity", index: 17 },
+    "18 The Moon": { path: "Netzach–Malkuth", letter: "Qoph", hebrewSymbol: "ק", pathNumber: 29, meaning: "Illusion, fear, subconscious", index: 18 },
+    "19 The Sun": { path: "Hod–Yesod", letter: "Resh", hebrewSymbol: "ר", pathNumber: 30, meaning: "Joy, success, vitality", index: 19 },
+    "20 Judgement": { path: "Hod–Malkuth", letter: "Shin", hebrewSymbol: "ש", pathNumber: 31, meaning: "Redemption, awakening, absolution", index: 20 },
+    "21 The World": { path: "Yesod–Malkuth", letter: "Tav", hebrewSymbol: "ת", pathNumber: 32, meaning: "Completion, integration, accomplishment", index: 21 }
+  };
+  return { ...major, ...minor };
+}
