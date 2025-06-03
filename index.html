@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tarot Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="spread-selector">
+    <button onclick="drawSpread('Saturn Square')">Saturn Square</button>
+    <button onclick="drawSpread('3-Card')">3-Card</button>
+    <button onclick="drawSpread('Celtic Cross')">Celtic Cross</button>
+  </div>
+  <div id="spread-container"></div>
+  <div id="zoom-overlay" onclick="exitZoom()">
+    <div id="zoom-card"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
