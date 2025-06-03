@@ -174,3 +174,24 @@ body {
   margin-top: 1vh;
   padding: 0.5vh;
 }
+
+/* Ensure all spreads are centered horizontally */
+#spread-output {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Override for grid-based spreads */
+.saturn-square,
+.celtic-cross,
+.past-/-present-/-future {
+  margin: 0 auto;
+}
+
+/* Ensure 3-card spread appears in a row */
+.past-/-present-/-future {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+}
