@@ -145,3 +145,23 @@ function generateGoldenDawnDeck() {
   };
   return { ...major, ...minor };
 }
+
+
+
+function drawSpread(deck, pattern) {
+  const labels = Object.keys(pattern);
+  const used = new Set();
+  const results = [];
+
+  while (results.length < labels.length) {
+    const index = Math.floor(Math.random() * 78);
+    if (!used.has(index)) {
+      used.add(index);
+      const cardName = Object.keys(deck)[index];
+      results.push({ label: labels[results.length], card: deck[cardName] });
+      results[results.length - 1].card.name = cardName;
+    }
+  }
+
+  return results;
+}
