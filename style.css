@@ -121,3 +121,27 @@ h1 {
 .card:nth-child(8) { grid-column: 7; grid-row: 4; } /* Environment */
 .card:nth-child(9) { grid-column: 7; grid-row: 3; } /* Hopes & Fears */
 .card:nth-child(10) { grid-column: 7; grid-row: 2; } /* Potential Outcome */
+
+
+
+#spread-output.celtic-cross {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, auto);
+  gap: 12px;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Positions based on traditional Celtic Cross diagram */
+.card:nth-child(1) { grid-column: 4; grid-row: 3; z-index: 2; } /* 1 - Current Situation */
+.card:nth-child(2) { grid-column: 4; grid-row: 3; z-index: 3; transform: rotate(90deg); } /* 2 - Challenge */
+.card:nth-child(3) { grid-column: 4; grid-row: 4; } /* 3 - Focus / Below */
+.card:nth-child(4) { grid-column: 3; grid-row: 3; } /* 4 - Past / Left */
+.card:nth-child(5) { grid-column: 4; grid-row: 2; } /* 5 - Strengths / Above */
+.card:nth-child(6) { grid-column: 5; grid-row: 3; } /* 6 - Near Future / Right */
+.card:nth-child(7) { grid-column: 6; grid-row: 6; } /* 7 - Advice / Bottom of staff */
+.card:nth-child(8) { grid-column: 6; grid-row: 5; } /* 8 - Environment */
+.card:nth-child(9) { grid-column: 6; grid-row: 4; } /* 9 - Hopes & Fears */
+.card:nth-child(10) { grid-column: 6; grid-row: 3; } /* 10 - Potential Outcome */
