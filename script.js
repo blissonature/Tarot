@@ -169,6 +169,7 @@ function exitZoom() {
 }
 
 drawBtn.onclick = drawSpread;
+console.log("Draw button ready");
 searchBtn.onclick = () => {
   searchContainer.classList.toggle('hidden');
   cardList.innerHTML = '';
