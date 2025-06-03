@@ -137,6 +137,10 @@ function generateGoldenDawnDeck() {
 
 
 
+
+});
+
+
 document.getElementById("draw-button").addEventListener("click", () => {
   const spreadType = document.getElementById("spread-select").value;
   const pattern = spreads[spreadType];
