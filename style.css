@@ -1,22 +1,4 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  margin: 0;
-  padding: 2vw;
-  background-color: #f4f4f9;
-}
-
-h1 {
-  font-size: 2.5vw;
-  margin-bottom: 1vw;
-}
-
-label, select, button {
-  font-size: 1.2vw;
-  margin: 0.5vw;
-  padding: 0.5vw;
-}
-
+/* GENERAL LAYOUT */
 #spread-output {
   display: flex;
   flex-wrap: wrap;
@@ -25,19 +7,19 @@ label, select, button {
   margin-top: 2vw;
 }
 
-/* Default card style */
+/* CARD */
 .card {
   background: white;
   border: 1px solid #ccc;
   border-radius: 1vw;
   padding: 1vw;
-  width: 20vw;
-  min-height: 15vw;
+  width: 16vw;
+  min-height: 12vw;
   box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
-  font-size: 1.1vw;
-  overflow: hidden;
+  font-size: 1vw;
   cursor: pointer;
   transition: transform 0.2s ease;
+  position: relative;
 }
 
 .card:hover {
@@ -46,23 +28,38 @@ label, select, button {
 
 .card em {
   display: block;
-  margin: 0.5vw 0;
+  font-size: 1.1vw;
   font-style: italic;
-  font-size: 1.2vw;
+  margin: 0.3vw 0;
 }
 
 .card-details {
+  font-size: 0.9vw;
   margin-top: 0.5vw;
-  font-size: 1vw;
 }
 
-/* Spread-specific layouts */
-.saturn-square .card {
-  width: 18vw;
-  min-height: 14vw;
+/* SATURN SQUARE GRID */
+.saturn-square {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1vw;
 }
 
-.celtic-cross .card {
-  width: 18vw;
-  min-height: 14vw;
+/* CELTIC CROSS GRID */
+.celtic-cross {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, auto);
+  gap: 1vw;
 }
+
+.celtic-cross .card:nth-child(1) { grid-column: 3; grid-row: 3; } /* Center */
+.celtic-cross .card:nth-child(2) { grid-column: 3; grid-row: 3; z-index: 1; } /* Cross */
+.celtic-cross .card:nth-child(3) { grid-column: 3; grid-row: 4; }
+.celtic-cross .card:nth-child(4) { grid-column: 2; grid-row: 3; }
+.celtic-cross .card:nth-child(5) { grid-column: 3; grid-row: 2; }
+.celtic-cross .card:nth-child(6) { grid-column: 4; grid-row: 3; }
+.celtic-cross .card:nth-child(7) { grid-column: 6; grid-row: 5; }
+.celtic-cross .card:nth-child(8) { grid-column: 6; grid-row: 4; }
+.celtic-cross .card:nth-child(9) { grid-column: 6; grid-row: 3; }
+.celtic-cross .card:nth-child(10) { grid-column: 6; grid-row: 2; }
