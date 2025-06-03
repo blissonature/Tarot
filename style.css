@@ -1,7 +1,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 20px;
+  padding: 1.5vw;
   background-color: #f4f4f4;
   color: #222;
   margin: 0;
@@ -19,7 +19,7 @@ h1 {
 
 #spread-select, #draw-button {
   font-size: 1rem;
-  padding: 8px 12px;
+  padding: 1.5vw 12px;
   margin: 0 5px;
 }
 
@@ -27,25 +27,37 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 1.5vw;
 }
 
 .card {
   background: white;
   border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 16px;
-  height: 300px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 1vw;
+  padding: 1rem;
+  width: 28vw;
+  height: 32vh;
+  box-shadow: 0 0.3vw 0.6vw rgba(0, 0, 0, 0.1);
   text-align: left;
   transition: transform 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: start;
   font-family: sans-serif;
-  font-size: 14px;
+  font-size: 1.1vw;
   line-height: 1.4;
+}
+#spread-output {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5vw;
+  justify-content: center;
+}
+#spread-output {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5vw;
+  justify-content: center;
 }
 
 .card:hover {
@@ -83,19 +95,31 @@ h1 {
   .card {
   background: white;
   border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 16px;
-  height: 300px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 1vw;
+  padding: 1rem;
+  width: 28vw;
+  height: 32vh;
+  box-shadow: 0 0.3vw 0.6vw rgba(0, 0, 0, 0.1);
   text-align: left;
   transition: transform 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: start;
   font-family: sans-serif;
-  font-size: 14px;
+  font-size: 1.1vw;
   line-height: 1.4;
+}
+#spread-output {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5vw;
+  justify-content: center;
+}
+#spread-output {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5vw;
+  justify-content: center;
 }
 
   #spread-select, #draw-button {
@@ -115,7 +139,7 @@ h1 {
 #spread-output.saturn-square {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 1.5vw;
   justify-items: center;
 }
 
@@ -125,10 +149,10 @@ h1 {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(5, auto);
-  gap: 10px;
+  gap: 1.5vw;
   justify-items: center;
   align-items: center;
-  padding: 20px;
+  padding: 1.5vw;
 }
 
 /* Define the placement of each card by area */
@@ -149,10 +173,10 @@ h1 {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(6, auto);
-  gap: 12px;
+  gap: 1.5vw;
   justify-items: center;
   align-items: center;
-  padding: 20px;
+  padding: 1.5vw;
 }
 
 /* Positions based on traditional Celtic Cross diagram */
