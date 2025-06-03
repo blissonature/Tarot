@@ -9,7 +9,7 @@ function generateGoldenDawnMinorMeanings() {
     "Ace of Wands": { element: "Fire", zodiac: "", meaning: "Beginning of inspiration", index: 22 },
     "Ace of Cups": { element: "Water", zodiac: "", meaning: "Beginning of love", index: 36 },
     "Ace of Swords": { element: "Air", zodiac: "", meaning: "Beginning of reason", index: 50 },
-    "Ace of Disks": { element: "Earth", zodiac: "", meaning: "Beginning of manifestation", index: 64 },,
+    "Ace of Disks": { element: "Earth", zodiac: "", meaning: "Beginning of manifestation", index: 64 },
 "2 of Swords": { element: "Air", zodiac: "Moon in Libra", meaning: "Peace, balance", index: 51 },
 "3 of Swords": { element: "Air", zodiac: "Saturn in Libra", meaning: "Sorrow, heartbreak", index: 52 },
 "4 of Swords": { element: "Air", zodiac: "Jupiter in Libra", meaning: "Truce, rest, recovery", index: 53 },
