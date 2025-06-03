@@ -2,42 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tarot Tool</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="deck.js" defer></script>
-  <script src="script.js" defer></script>
 </head>
 <body>
-  <div id="app">
-    <div id="spread" class="grid-container hidden"></div>
-
-    <div id="zoom-overlay" class="hidden" onclick="exitZoom()">
-      <div id="zoom-card"></div>
-    </div>
-
-    <div id="search-container" class="hidden">
-      <input id="searchInput" type="text" placeholder="Search by name, element, zodiac..." />
-      <div id="filters">
-        <label><input type="checkbox" value="Wands" /> Wands</label>
-        <label><input type="checkbox" value="Disks" /> Disks</label>
-        <label><input type="checkbox" value="Swords" /> Swords</label>
-        <label><input type="checkbox" value="Cups" /> Cups</label>
-        <label><input type="checkbox" value="Trumps" /> Trumps</label>
-      </div>
-      <div id="card-list"></div>
-    </div>
-
-    <div id="controls">
-      <select id="spread-select">
-        <option value="saturnSquare">Saturn Square (3x3)</option>
-        <option value="pastPresentFuture">Past / Present / Future</option>
-        <option value="singleCard">Single Card Draw</option>
-        <option value="celticCross">Celtic Cross</option>
-      </select>
-      <button id="draw-btn">Draw Spread</button>
-      <button id="search-btn">Search Cards</button>
-    </div>
+  <h1>Tarot Tool</h1>
+  <div id="controls">
+    <select id="spread-select">
+      <option value="Saturn Square">Saturn Square</option>
+      <option value="Past / Present / Future">Past / Present / Future</option>
+      <option value="Celtic Cross">Celtic Cross</option>
+    </select>
+    <button id="draw-button">Draw Spread</button>
   </div>
+  <div id="spread-output"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
