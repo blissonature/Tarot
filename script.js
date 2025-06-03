@@ -97,13 +97,7 @@ function generateInterpretiveSummary(cards) {
     : '';
 
   return `The spread reflects the following thematic influences:<br>${details}${majorComment}${elementComment}${courtComment}`;
-}, {});
-
-  const sortedThemes = Object.entries(counted).sort((a, b) => b[1] - a[1]);
-  const details = sortedThemes.map(([theme, count]) => `• <strong>${theme}</strong> appears ${count} time${count > 1 ? 's' : ''}`).join('<br>');
-
-  return `The spread reflects the following thematic influences:<br>${details}`;
-}, {});
+}
 const spread = document.getElementById('spread');
 const zoomOverlay = document.getElementById('zoom-overlay');
 const zoomCard = document.getElementById('zoom-card');
@@ -132,7 +126,6 @@ function drawSpread() {
   summaryEl.style.borderRadius = '10px';
   summaryEl.innerHTML = `<h3>Interpretive Summary</h3><p>${summary}</p>`;
   spread.appendChild(summaryEl);
-});
 }
 
 function createCardElement(card) {
