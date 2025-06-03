@@ -76,15 +76,15 @@ function drawSpread(deck, pattern) {
 
 const spreads = {
   "Saturn Square": {
-  "Restriction": "Card 1",
-  "Karmic Pattern": "Card 2",
-  "Suppressed Potential": "Card 3",
-  "Challenge": "Card 4",
-  "Saturn’s Gaze": "Card 5",
-  "Discipline": "Card 6",
-  "Foundation": "Card 7",
-  "Manifested Result": "Card 8",
-  "Path to Mastery": "Card 9"
+  "Restriction": null,
+  "Karmic Pattern": null,
+  "Suppressed Potential": null,
+  "Challenge": null,
+  "Saturn’s Gaze": null,
+  "Discipline": null,
+  "Foundation": null,
+  "Manifested Result": null,
+  "Path to Mastery": null
 },
   "Saturn Square": [
     "Restriction",
