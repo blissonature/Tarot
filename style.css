@@ -88,3 +88,12 @@ h1 {
     align-items: center;
   }
 }
+
+
+
+#spread-output.saturn-square {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}

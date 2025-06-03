@@ -144,8 +144,11 @@ document.getElementById("draw-button").addEventListener("click", () => {
   const deck = generateGoldenDawnDeck();
   const results = drawSpread(deck, pattern);
 
+  
   const output = document.getElementById("spread-output");
   output.innerHTML = "";
+  output.className = spreadType === "Saturn Square" ? "saturn-square" : "";
+
 
   results.forEach(({ label, card }) => {
     const div = document.createElement("div");
